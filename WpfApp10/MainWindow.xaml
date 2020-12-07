@@ -1,0 +1,323 @@
+﻿<Window x:Class="WpfApp10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp10"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="White"  >
+    <Window.Resources>
+        <Style  TargetType="{x:Type Border}">
+
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Margin" Value="2"/>
+            <Style.Triggers>
+
+                <EventTrigger RoutedEvent="MouseDown">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ThicknessAnimation Duration="0:0:0.100" To="5" Storyboard.TargetProperty="BorderThickness" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+
+                </EventTrigger>
+
+                <EventTrigger RoutedEvent="MouseUp">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ThicknessAnimation Duration="0:0:0.200" To="2" Storyboard.TargetProperty="BorderThickness" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+
+            </Style.Triggers>
+
+        </Style>
+        <Style  TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseDown">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.100" Storyboard.TargetProperty="FontSize" To="20"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+
+                </EventTrigger>
+
+                <EventTrigger RoutedEvent="MouseUp">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:0.100" Storyboard.TargetProperty="FontSize" To="30"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="Gray" BasedOn="{StaticResource {x:Type Border}}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value= "Gray"/>
+        </Style>
+
+        <Style x:Key="Red" BasedOn="{StaticResource {x:Type Border}}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value= "Red"/>
+        </Style>
+
+        <Style x:Key="Yellow" BasedOn="{StaticResource {x:Type Border}}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value= "Yellow"/>
+        </Style>
+
+        <Style x:Key="blue" BasedOn="{StaticResource {x:Type Border}}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value= "blue"/>
+        </Style>
+
+        <Style x:Key="Purple" BasedOn="{StaticResource {x:Type Border}}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value= "Purple"/>
+        </Style>
+        <Style x:Key="Brown" BasedOn="{StaticResource {x:Type Border}}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value= "RosyBrown"/>
+        </Style>
+
+        <Style x:Key="Green" BasedOn="{StaticResource {x:Type Border}}" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value= "Green"/>
+        </Style>
+
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <Border  Style="{StaticResource Red}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  >
+            <TextBlock >`</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Red}"  Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>1</TextBlock>
+        </Border>
+        <Border  Style="{StaticResource Red}"  Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>2</TextBlock>
+        </Border>
+        <Border  Style="{StaticResource Yellow}"  Grid.Column="6" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>3</TextBlock>
+        </Border>
+        <Border  Style="{StaticResource Green }"  Grid.Column="8" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>4</TextBlock>
+        </Border>
+        <Border Style="{StaticResource blue }"  Grid.Column="10" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>5</TextBlock>
+        </Border>
+        <Border Style="{StaticResource blue }"  Grid.Column="12" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>6</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Purple }"  Grid.Column="14" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>7</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Purple }"  Grid.Column="16" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>8</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Red}"  Grid.Column="18" Grid.Row="0" Grid.ColumnSpan="2">
+            <TextBlock>9</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Yellow}"  Grid.Column="20" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>0</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green }" Grid.Column="22" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>-</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green }" Grid.Column="24" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>=</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray }" Grid.Column="26" Grid.Row="0" Grid.ColumnSpan="5" >
+            <TextBlock FontSize="19">Backspace</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray }"  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" >
+            <TextBlock>Tab</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Red}"  Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>q</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Yellow }"  Grid.Column="5" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>w</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green }" Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>e</TextBlock>
+        </Border>
+        <Border Style="{StaticResource blue }"  Grid.Column="9" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>r</TextBlock>
+        </Border>
+        <Border Style="{StaticResource blue }"  Grid.Column="11" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>t</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Purple }"  Grid.Column="13" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>y</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Purple }"  Grid.Column="15" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>u</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Red }"  Grid.Column="17" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>i</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Yellow }"  Grid.Column="19" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>o</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green }"  Grid.Column="21" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>p</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green }"  Grid.Column="23" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>[</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green }"  Grid.Column="25" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TextBlock>]</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green }"  Grid.Column="27" Grid.Row="1" Grid.ColumnSpan="3" >
+            <TextBlock>\</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray }"  Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" >
+            <TextBlock FontSize="20">Capslock</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Red }"  Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2" >
+            <TextBlock>a</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Yellow}"  Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="2" >
+            <TextBlock>s</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green }"  Grid.Column="8" Grid.Row="2" Grid.ColumnSpan="2" >
+            <TextBlock>d</TextBlock>
+        </Border>
+        <Border Style="{StaticResource blue }"  Grid.Column="10" Grid.Row="2" Grid.ColumnSpan="2" >
+            <TextBlock>f</TextBlock>
+        </Border>
+        <Border Style="{StaticResource blue }"  Grid.Column="12" Grid.Row="2" Grid.ColumnSpan="2" >
+            <TextBlock>g</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Purple }"  Grid.Column="14" Grid.Row="2" Grid.ColumnSpan="2" >
+            <TextBlock>h</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Purple }"  Grid.Column="16" Grid.Row="2" Grid.ColumnSpan="2" >
+            <TextBlock>j</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Red }"  Grid.Column="18" Grid.Row="2" Grid.ColumnSpan="2" >
+            <TextBlock>k</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Yellow }"  Grid.Column="20" Grid.Row="2" Grid.ColumnSpan="2" >
+            <TextBlock>l</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green }"  Grid.Column="22" Grid.Row="2" Grid.ColumnSpan="2" >
+            <TextBlock>;</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green }"  Grid.Column="24" Grid.Row="2" Grid.ColumnSpan="2" >
+            <TextBlock>'</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray}"  Grid.Column="26" Grid.Row="2" Grid.ColumnSpan="4" >
+            <TextBlock>enter</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray}"  Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" >
+            <TextBlock>shift</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Red}"  Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="2" >
+            <TextBlock>z</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Yellow}"  Grid.Column="7" Grid.Row="3" Grid.ColumnSpan="2" >
+            <TextBlock>x</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green}"  Grid.Column="9" Grid.Row="3" Grid.ColumnSpan="2" >
+            <TextBlock>c</TextBlock>
+        </Border>
+        <Border Style="{StaticResource blue}"  Grid.Column="11" Grid.Row="3" Grid.ColumnSpan="2" >
+            <TextBlock>v</TextBlock>
+        </Border>
+        <Border Style="{StaticResource blue}"  Grid.Column="13" Grid.Row="3" Grid.ColumnSpan="2" >
+            <TextBlock>b</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Purple}"  Grid.Column="15" Grid.Row="3" Grid.ColumnSpan="2" >
+            <TextBlock>n</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Purple}"  Grid.Column="17" Grid.Row="3" Grid.ColumnSpan="2" >
+            <TextBlock>m</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Red}"  Grid.Column="19" Grid.Row="3" Grid.ColumnSpan="2" >
+            <TextBlock>,</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Yellow}"  Grid.Column="21" Grid.Row="3" Grid.ColumnSpan="2" >
+            <TextBlock>.</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Green}" Grid.Column="23" Grid.Row="3" Grid.ColumnSpan="2" >
+            <TextBlock>/</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray}"   Grid.Column="25" Grid.Row="3" Grid.ColumnSpan="6" >
+            <TextBlock>shift</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray}"  Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" >
+            <TextBlock>Ctrl</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray}" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" >
+            <TextBlock>Win</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray}"  Grid.Column="6" Grid.Row="4" Grid.ColumnSpan="3" >
+            <TextBlock>Alt</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Brown}"  Grid.Column="9" Grid.Row="4" Grid.ColumnSpan="12" >
+            <TextBlock >Space</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray}"  Grid.Column="21" Grid.Row="4" Grid.ColumnSpan="3" >
+            <TextBlock >Alt</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray}"  Grid.Column="24" Grid.Row="4" Grid.ColumnSpan="3" >
+            <TextBlock> Win</TextBlock>
+        </Border>
+        <Border Style="{StaticResource Gray}"  Grid.Column="27" Grid.Row="4" Grid.ColumnSpan="3" >
+            <TextBlock>Cntrl</TextBlock>
+        </Border>
+    </Grid>
+
+</Window>
